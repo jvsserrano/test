@@ -13,7 +13,7 @@ module.exports = function(controller) {
         var roomId = message.channel;
 
         var arrayOfStrings = message.text.split(spaceSeperator);
-        if(arrayOfStrings.length == 2){
+      //  if(arrayOfStrings.length == 2){
             var arrayOfEmails = arrayOfStrings[1].split(comaSeperator);
            
             if(arrayOfEmails.length > 0){
@@ -26,6 +26,6 @@ module.exports = function(controller) {
                 });
                 bot.reply(message, "People added");
             }
-        }
+       // }
     });
 }
