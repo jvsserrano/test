@@ -7,13 +7,14 @@ module.exports = function(controller) {
         var email = message.user;
         var CiscoSpark = require('node-ciscospark');
         var async = require('async');
+        var spark = new CiscoSpark(process.env.SPARK_TOKEN);
 
         var spaceSeperator = " ";
         var comaSeperator = ",";
         var roomId = message.channel;
 
         var arrayOfStrings = message.text.split(spaceSeperator);
-      //  if(arrayOfStrings.length == 2){
+        if(arrayOfStrings.length == 2){
             var arrayOfEmails = arrayOfStrings[1].split(comaSeperator);
            
             if(arrayOfEmails.length > 0){
@@ -26,6 +27,6 @@ module.exports = function(controller) {
                 });
                 bot.reply(message, "People added");
             }
-       // }
+        }
     });
 }
