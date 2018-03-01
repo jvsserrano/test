@@ -9,6 +9,7 @@ module.exports = function (controller) {
         text += "\n- " + bot.enrichCommand(message, "help") + ": spreads the word about my skills";
         text += "\n- " + bot.enrichCommand(message, "espacio") + ": espacio clonado";
         text += "\n- " + bot.enrichCommand(message, "pedido") + ": espacio clonado";
+        text += "\n- " + bot.enrichCommand(message, "add") + ": espacio clonado";
         bot.reply(message, text);
     });
 }
